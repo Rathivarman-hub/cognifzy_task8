@@ -189,11 +189,11 @@ const Jobs = () => {
             </div>
           ))}
           <div className="mb-3">
-            <label className="form-label-custom">Body (HTML supported)</label>
+            <label className="form-label-custom">Body</label>
             <textarea
               className="form-control-custom"
               rows={4}
-              placeholder="<h1>Hello!</h1><p>Your message here.</p>"
+              placeholder=""
               value={emailForm.body}
               onChange={(e) => setEmailForm((p) => ({ ...p, body: e.target.value }))}
             />

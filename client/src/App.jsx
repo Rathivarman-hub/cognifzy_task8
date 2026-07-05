@@ -49,7 +49,7 @@ function App() {
                   <i className="bi bi-list" style={{ fontSize: '1.2rem' }}></i>
                 </button>
                 <div className="page-title d-none d-md-block">
-                  Cognifyz Advanced Stack
+                  ServerPulse Dashboard
                 </div>
                 <div className="d-flex align-items-center gap-2">
                   <span

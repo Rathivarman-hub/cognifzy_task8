@@ -43,7 +43,7 @@ const Home = () => {
               <i className="bi bi-lightning-charge-fill text-white" style={{ fontSize: '1.4rem' }}></i>
             </div>
             <div>
-              <h1 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 2 }}>Cognifyz Advanced</h1>
+              <h1 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 2 }}>ServerPulse</h1>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', margin: 0 }}>
                 MERN Stack · Bull Queue · Redis · MVC · Middleware
               </p>

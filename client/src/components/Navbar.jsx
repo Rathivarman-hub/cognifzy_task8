@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
+import logo from '../assets/logo.png';
 
 const navItems = [
   { to: '/', label: 'Home', icon: 'bi-house', exact: true },
@@ -15,20 +16,14 @@ const Navbar = ({ onMobileClose }) => {
       {/* Brand */}
       <div className="sidebar-brand">
         <div className="d-flex align-items-center gap-2 mb-1">
-          <div
-            style={{
-              width: 32, height: 32,
-              background: 'var(--accent)',
-              borderRadius: 8,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 16,
-            }}
-          >
-            <i className="bi bi-lightning-charge-fill text-white"></i>
-          </div>
+          <img 
+            src={logo} 
+            alt="ServerPulse Logo" 
+            style={{ width: 32, height: 32, objectFit: 'contain' }} 
+          />
           <div>
-            <div className="brand-name">Cognifyz</div>
-            <div className="brand-sub">Advanced Stack</div>
+            <div className="brand-name">ServerPulse</div>
+            <div className="brand-sub">DASHBOARD</div>
           </div>
         </div>
       </div>

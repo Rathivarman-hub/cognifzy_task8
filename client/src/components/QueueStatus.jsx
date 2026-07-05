@@ -28,7 +28,7 @@ const QueueStatus = ({ name, stats, icon }) => {
         <span style={{ fontWeight: 600 }}>{name}</span>
         <span className="pulse-dot green ms-auto"></span>
       </div>
-      <div className="d-flex gap-2" style={{ overflowX: 'auto', paddingBottom: '4px', margin: '0 -4px', padding: '0 4px' }}>
+      <div className="d-flex gap-2 queue-boxes" style={{ overflowX: 'auto', paddingBottom: '4px', margin: '0 -4px', padding: '0 4px' }}>
         {items.map((item) => (
           <div key={item.label} style={{ flex: '1 0 65px' }}>
             <div

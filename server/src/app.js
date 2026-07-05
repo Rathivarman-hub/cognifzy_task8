@@ -36,12 +36,25 @@ app.use(
 );
 app.use(compression());
 
-// ── CORS ────────────────────────────────────────────────────────────────────
+const defaultOrigins = [
+  'http://localhost:5173', 
+  'http://localhost:3000', 
+  'https://serverpulse-1.vercel.app'
+];
+
+const allowedOrigins = process.env.CLIENT_URL 
+  ? process.env.CLIENT_URL.split(',').map(url => url.trim())
+  : defaultOrigins;
+
 app.use(
   cors({
-    origin: process.env.NODE_ENV === 'production'
-      ? process.env.CLIENT_URL
-      : ['http://localhost:5173', 'http://localhost:3000'],
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
